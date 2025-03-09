@@ -36,7 +36,7 @@ const Services = () => {
 
   return (
     <div>
-      <section className={styles.corporativeBanner}>
+      <section id="services" className={styles.corporativeBanner}>
         <a href="https://www.linebiz.com/jp-en/">
           <div className={styles.bannerTxt}>Corporative services</div>
           <div className={styles.bannerImageCorp}>

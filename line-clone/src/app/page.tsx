@@ -1,5 +1,4 @@
 // 'use client';
-import Dummy from "@/components/Dummy/Dummy";
 import Description from "@/components/Description/Description";
 import MainMsg from "@/components/MainMsg/MainMsg";
 import MainReversed from "@/components/MainMsg/MainReversed";
