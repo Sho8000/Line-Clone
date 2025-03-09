@@ -1,0 +1,135 @@
+.footer {
+  background-color: #ffffff;
+  padding: 20px 0;
+  border-top: 1px solid #e6e6e6;
+  justify-content: flex-start;
+}
+
+.container {
+  margin: 0;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  text-align: left;
+  padding: 20px 0;
+
+}
+
+.links a {
+  color: #666666;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.links a:hover {
+  color: #00b900;
+}
+
+.links a svg {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.copyright {
+  color: #666666;
+  font-size: 12px;
+}
+
+.downloadLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.downloadLink span {
+  display: inline-block;
+}
+
+.divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgba(46, 27, 27, 0.1);
+  margin: 1rem 0;
+}
+
+.verticalDivider {
+  width: 1px;
+  height: 24px;
+  background-color: rgba(46, 27, 27, 0.1);
+  margin: 0;
+  align-self: center;
+}
+
+.socialLinks {
+  margin-left: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  font-size: 1.5rem !important;
+  color: #000000 !important;
+  transition: color 0.2s ease;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.downloadLinks {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.bottomLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.leftLinks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .downloadLinks {
+    display: none;
+  }
+  
+  .bottomLinks {
+    justify-content: flex-start;
+  }
+  
+  .leftLinks {
+    flex-wrap: wrap;
+  }
+  
+  .divider {
+    display: none;
+  }
+
+  .socialLinks {
+    margin-left: 0;
+  }
+}

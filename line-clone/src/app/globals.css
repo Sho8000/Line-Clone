@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+} */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section{
+  scroll-margin-top: 80px;
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 ;
+}
+
+.mainServices{
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.dotLine{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  border: 1px gray dotted;
+  transform: translateX(-50%);
+}
+
+.dotLine::before,.dotLine::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px gray solid;
+  background-color: white;
+  transform: translateX(-50%);
+}
+
+.dotLine::before{
+  top: 0;
+}
+.dotLine::after{
+  bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .dotLine{
+    left: 5%;
+  }
+}
+

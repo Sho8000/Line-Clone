@@ -1,0 +1,360 @@
+[
+  {
+      "id": 2,
+      "Title": "LINE",
+      "description": "A communication app that connects people, services, and information.",
+      "image": "images/services/line.png",
+      "category": "Communication",
+      "appStoreUrl": "https://apps.apple.com/jp/app/line/id443904275",
+      "googleStoreUrl": "https://itunes.apple.com/jp/app/line/id539883307?mt=12&uo=4",
+      "desktopUrl": "https://itunes.apple.com/jp/app/line/id539883307?mt=12&uo=4"
+  },
+  {
+      "id": 3,
+      "Title": "OpenChat",
+      "description": "Talk with other users with similar hobbies and interests.",
+      "image": "images/services/OpenChat.png",
+      "category": "Communication",
+      "moreDetailsUrl": "https://openchat.line.me/"
+  },
+
+  {
+      "id": 4,
+      "Title": "Line Manga",
+      "description": "Find and your favorite manga!",
+      "image": "images/services/LineManga.png",
+      "category": "Entertainment",
+      "appStoreUrl": "https://apps.apple.com/jp/app/line-manga/id597088068",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=jp.naver.linemanga.android",
+      "moreDetailsUrl": "https://manga.line.me/"
+  },
+  {
+      "id": 5,
+      "Title": "LINE MUSIC",
+      "description": "Check out and listen to trending songs.",
+      "image": "images/services/LineMusic.png",
+      "category": "Entertainment",
+      "appStoreUrl": "https://apps.apple.com/jp/app/linemusic/id966142320",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=jp.linecorp.linemusic.android",
+      "moreDetailsUrl": "https://music.line.me/top/"
+  },
+  {
+      "id": 6,
+      "Title": "Line Fortune",
+      "description": "A lot of famous fortune tellers are here to help you enjoy your daily life more.",
+      "image": "images/services/LineFortune.png",
+      "category": "Entertainment",
+      "appStoreUrl": "https://apps.apple.com/jp/app/linemusic/id966142320",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=jp.linecorp.linemusic.android",
+      "moreDetailsUrl": "https://music.line.me/top/"
+  },
+  {
+      "id": 7,
+      "Title": "LINE RECORDS",
+      "description": "Digital label for streaming industry.",
+      "image": "images/services/LineRecords.png",
+      "category": "Entertainment",
+      "moreDetailsUrl": "https://linerecords.me/"
+  },
+  {
+      "id": 8,
+      "Title": "Charmmy",
+      "description": "Media to support women's problems.",
+      "image": "images/services/Charmmy.png",
+      "category": "Entertainment",
+      "moreDetailsUrl": "https://fortune.line.me/charmmy/"
+  },
+  
+  {
+      "id": 9,    
+      "Title": "LINE POINT CLUB",
+      "description": "Get good deals with this LINE's membership program.",
+      "image": "images/services/LinePointClub.png",
+      "category": "Lifestyle",
+      "moreDetailsUrl": "https://pointclub.line.me/top/ja/"
+  },
+  {
+      "id": 10,
+      "Title": "Part Time JobS",
+      "description": "Find a part-time job with LINE and apply right away.",
+      "image": "images/services/PartTimeJobs.png",
+      "category": "Lifestyle", 
+      "moreDetailsUrl": "https://baito.line.me/"
+  },
+
+  {
+      "id": 11,
+      "Title": "BRAND CATALOG",
+      "description": "Offer you good deals at all times.",
+      "image": "images/services/LineCatalog.png",
+      "category": "Shopping",
+      "moreDetailsUrl": "https://ec.line.me/about/"
+  },
+  {
+      "id": 12,
+      "Title": "LINE FRIENDS Store",
+      "description": "Official online store of LINE character goods.",
+      "image": "images/services/LineFriends.png",
+      "category": "Shopping",
+      "moreDetailsUrl": "https://www.linefriends.jp/"
+  },
+  {
+      "id": 13,
+      "Title": "LINE Flyer",
+      "description": "Digital flyers for you to find good deals.",
+      "image": "images/services/LineFlyer.png",
+      "category": "Shopping",
+      "moreDetailsUrl": "https://chirashi.line.me/home?utm_source=online&utm_medium=backlink&utm_campaign=lineme"
+  },
+  {
+      "id": 14,
+      "Title": "LINE GIFT",
+      "description": "Send warm and cozy presents for your friends.",
+      "image": "images/services/LineGift.png",
+      "category": "Shopping",
+      "moreDetailsUrl": "https://gift.line.me/about"
+  },
+
+  {
+      "id": 15,
+      "Title": "LINE Pay",
+      "description": "LINE's mobile payment service.",
+      "image": "images/services/LinePay.png",
+      "category": "Fintech",
+      "appStoreUrl": "https://apps.apple.com/jp/app/line-pay-%E5%89%B2%E5%BC%95%E3%82%AF%E3%83%BC%E3%83%9D%E3%83%B3%E3%81%8C%E3%81%8A%E5%BE%97%E3%81%AA%E3%82%B9%E3%83%9E%E3%83%9B%E6%B1%BA%E6%B8%88%E3%82%A2%E3%83%97%E3%83%AA/id1449817412",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=com.linepaycorp.talaria" ,
+      "moreDetailsUrl": "https://pay.line.me/portal/jp/main"
+  },
+  {
+      "id": 16,
+      "Title": "Securities",
+      "description": "A full-scale but easy to use. Buy a stock from 100 yen.",
+      "image": "images/services/Securities.png",
+      "category": "Fintech",
+      "moreDetailsUrl": "https://line-sec.co.jp/"
+  },
+  {
+      "id": 17,
+      "Title": "Score",
+      "description": "Enrich your life with LINE Score.",
+      "image": "images/services/LineScore.png",
+      "category": "Fintech",
+      "moreDetailsUrl": "https://linefinancialcorp.com/ja/services/business"
+  },
+  {
+      "id": 18,
+      "Title": "LINE Pocket Money",
+      "description": "To those who need a little bit of money.",
+      "image": "images/services/LinePocketMoney.png",
+      "category": "Fintech",
+      "moreDetailsUrl": "https://linecreditcorp.com/pocketmoney/"
+  },
+  {
+      "id": 19,
+      "Title": "LINE FX",
+      "description": "Start FX with LINE.",
+      "image": "images/services/LineFX.png",
+      "category": "Fintech",
+      "moreDetailsUrl": "https://line-fx.com/"
+  },
+  
+  {
+      "id": 20,
+      "Title": "LINE Ads",
+      "description": "Easy online ad delivery.",
+      "image": "images/services/LineAdaPlataform.png",
+      "category": "Business",
+      "moreDetailsUrl": "https://www.linebiz.com/jp/service/line-ads/"
+  },
+  {
+      "id": 21,
+      "Title": "LINE Ads Platform for Publishers",
+      "description": "A large scale ad network to reach massive number of users.",
+      "image": "images/services/LineAdaPlataform.png",
+      "category": "Business",
+      "moreDetailsUrl": "https://pages.linebiz.com/line-ads-network/"
+  },
+  {
+      "id": 22,
+      "Title": "Talk Head View",
+      "description": "Place your vide-ad on the top of the chat list page.",
+      "image": "images/services/TalkHeadView.png",
+      "category": "Business",
+      "moreDetailsUrl": "https://www.linebiz.com/jp/service/talk-head-view/"
+  },
+  {
+      "id": 23,
+      "Title": "LINE Sales Promotion",
+      "description": "A new solution to sales activity! Use LINE to promote your business.",
+      "image": "images/services/LineSalesPromotion.png",
+      "category": "Business",
+      "moreDetailsUrl": "https://reward.line.me/top/"
+  }, 
+  {
+      "id": 24,
+      "Title": "LINE Official Account",
+      "description": "Send messages directly to your customers.",
+      "image": "images/services/LineOfficialAccount.png",
+      "category": "Business",
+      "moreDetailsUrl": "https://www.linebiz.com/jp/service/line-official-account/"
+  }, 
+  {
+      "id": 25,
+      "Title": "LINE POINT AD ",
+      "description": "Get more users involved with an attractive incentive.",
+      "image": "images/services/LinePointAd.png",
+      "category": "Business",
+      "moreDetailsUrl": "https://www.linebiz.com/jp/service/line-point-ad/"
+  }, 
+  {
+      "id": 26,
+      "Title": "LINE Promotion Sticker",
+      "description": "Brand your bussiness through LINE stickers.",
+      "image": "images/services/LinePromotionSticker.png",
+      "category": "Business",
+      "moreDetailsUrl": "https://www.linebiz.com/jp/service/line-promotion-sticker/"
+  },
+  {
+      "id": 27,
+      "Title": "LINE mini app",
+      "description": "Provide useful services on LINE to support your daily life.",
+      "image": "images/services/LineMiniApp.png",
+      "category": "Business",
+      "moreDetailsUrl": "https://www.linebiz.com/jp/service/line-mini-app/"
+  },
+  {
+      "id": 28,
+      "Title": "LINE research",
+      "description": "The Japan's biggest research platform.",
+      "image": "images/services/LineResearch.png",
+      "category": "Business",
+      "moreDetailsUrl": "https://www.linebiz.com/jp/service/line-research/"
+  },
+  {
+      "id": 29,
+      "Title": "LINE WORKS",
+      "description": "LINE for business. Enjoy LINE-like chat, stickers with business-friendly features.",
+      "image": "images/services/LineWorks.png",
+      "category": "Business",
+      "moreDetailsUrl": "https://line.worksmobile.com/jp/"
+  },
+  {
+      "id": 30,
+      "Title": "LINE NEWS",
+      "description": "Read lastest, showbiz, all trending news on LINE.",
+      "image": "images/services/LineNews.png",
+      "category": "",
+      "moreDetailsUrl": "https://news.line.me/about/"
+  },
+
+
+  {
+      "id": 31,
+      "Title": "LINE Magic Coin",
+      "description": "Collect Coins to complete the Picture Books in this easy-to-play casual coin game!",
+      "image": "images/services/LineMagicCoin.png",
+      "category": "Game",
+      "appStoreUrl": "https://apps.apple.com/jp/app/id1554405694",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=com.linecorp.LGPJCOIN",
+      "moreDetailsUrl": "https://magiccoin.game.line.me/en/"
+  },
+  {
+      "id": 32,
+      "Title": "LINE Chef",
+      "description": "Team up with Brown and Sally and become a top chef!",
+      "image": "images/services/LineChef.png",
+      "category": "Game",
+      "appStoreUrl": "https://itunes.apple.com/jp/app/id1456569943",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=com.linecorp.LGCHEF"
+  },
+  {
+      "id": 33,
+      "Title": "LINE Bubble 2",
+      "description": "Go on a journey with Cony and a dragon to find Brown.",
+      "image": "images/services/LineBubble2.png",
+      "category": "Game",
+      "appStoreUrl": "https://itunes.apple.com/jp/app/id895761422",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=com.linecorp.LGBB2"
+  },
+  {
+      "id": 34,
+      "Title": "LINE PokoPoko",
+      "description": "Match up blocks to destroy them in this fresh and fun puzzle game.",
+      "image": "images/services/LinePokoPoko.png",
+      "category": "Game",
+      "appStoreUrl": "https://itunes.apple.com/jp/app/id888615473",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=com.linecorp.LGPKPK"
+  },
+  {
+      "id": 35,
+      "Title": "LINE Rangers",
+      "description": "LINE Rangers is a simple yet exciting, full-fledged tower defense RPG!",
+      "image": "images/services/LineRangers.jpg",
+      "category": "Game",
+      "appStoreUrl": "https://itunes.apple.com/jp/app/id767265270",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=com.linecorp.LGRGS"
+  }, 
+  {
+      "id": 36,
+      "Title": "LINE: Disney Tsum Tsum",
+      "description": "Collect, connect and pop cute Disney character Tsum Tsum.",
+      "image": "images/services/LineDisneyTsum.png",
+      "category": "Game",
+      "appStoreUrl": "https://itunes.apple.com/jp/app/id724594093",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=com.linecorp.LGTMTM"
+  },
+  {
+      "id": 37,
+      "Title": "LINE PokoPang Town",
+      "description": "An exhilarating one-tap puzzle game to build a town.",
+      "image": "images/services/LinePokoPangTown.png",
+      "category": "Game",
+      "appStoreUrl": "https://itunes.apple.com/jp/app/line-%E3%83%9D%E3%82%B3%E3%83%91%E3%83%B3%E3%82%BF%E3%82%A6%E3%83%B3/id1264947230?mt=8",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=com.linecorp.LGPKV&referrer",
+      "moreDetailsUrl": "https://pokopangtown.game.line.me/"
+  },
+  {
+      "id": 38,
+      "Title": "LINE POP2",
+      "description": "It is a fun puzzle game for both begginners and advanced players!",
+      "image": "images/services/LinePop2.png",
+      "category": "Game",
+      "appStoreUrl": "https://itunes.apple.com/jp/app/line-pop2/id878506376?mt=8",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=com.linecorp.LGLP2&hl=ja",
+      "moreDetailsUrl": "https://pop2.game.line.me/ja/"
+  },
+  {
+      "id": 39,
+      "Title": "LINE PokoPang",
+      "description": "Swipe away tons of blocks in one go.",
+      "image": "images/services/LinePokoPang.png",
+      "category": "Game",
+      "appStoreUrl": "https://itunes.apple.com/jp/app/id609427383",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=jp.naver.SJLGPP"
+  },
+  {
+      "id": 40,
+      "Title": "LINE Puzzle Tan Tan",
+      "description": "Clear the same blocks within the time limit with a cute panda!",
+      "image": "images/services/LinePuzzleTan.png",
+      "category": "Game",
+      "appStoreUrl": "https://itunes.apple.com/jp/app/line-pazuru-tantan/id798519009?mt=8",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=com.linecorp.LGPTT&hl=ja"
+  },{
+      "id": 41,
+      "Title": "LINE Bubble!",
+      "description": "An exciting bubble shooting game with the LINE characters!",
+      "image": "images/services/LineBubble.png",
+      "category": "Game",
+      "appStoreUrl": "https://itunes.apple.com/jp/app/line-baburu/id576696056",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=jp.naver.SJLGBUBBLE"
+  },{
+      "id": 42,
+      "Title": "LINE BROWN FARM",
+      "description": "LINE's favorite character, Brown becomes a farmer?!",
+      "image": "images/services/LineBrownFarm.png",
+      "category": "Game",
+      "appStoreUrl":  "https://itunes.apple.com/jp/app/id949344041",
+      "googleStoreUrl": "https://play.google.com/store/apps/details?id=com.linecorp.LGFARM"
+  }
+]

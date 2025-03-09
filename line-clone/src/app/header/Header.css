@@ -1,0 +1,47 @@
+@media only screen and (max-width:950px){
+  .mainWall{
+    .textArea{
+      width: 750px;
+      .mainText{
+        font-size: 120px;
+      }  
+    }
+  }
+}
+
+@media only screen and (max-width:768px){
+  .mainWall{
+    .textArea{
+      width: 400px;
+      .mainText{
+        font-size: 60px;
+      }  
+      .subText{
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:425px){
+  .mainWall{
+    .textArea{
+      width: 300px;
+      .mainText{
+        font-size: 48px;
+      }  
+      .subText{
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:425px){
+  .firstWall{
+    .firstWall_text{
+      font-size: 36px;
+      transform: translate(90%,50%);
+    }
+  }
+}

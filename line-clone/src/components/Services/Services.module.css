@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+KR&display=swap');
+
+.allProduct {
+    background: #f7f8f9;
+    padding: 180px 0;
+}
+
+.servicesTitle {
+    font-family: 'SFPro', 'Arial', 'Noto Sans JP', 'Noto Sans KR', sans-serif;
+    display: flex;
+    font-size: 60px;
+    line-height: 1.27;
+    color: black;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.productCategory {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+    border: 1px solid rgba(30, 30, 30, .2);
+    border-radius: 50px;
+    padding: 8px 15px;
+    color: rgba(30, 30, 30, .7);
+    background-color: transparent;
+}
+
+.productCategory.active {
+    color: #fff; 
+    background-color: #07b53b; 
+    border: 1px solid #07b53b;
+}
+
+.corporativeBanner{
+    width: 100%;
+    padding: 0px;
+    background: #f7f8f9;
+}
+
+.bannerImageCorp .img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0;
+    transition-delay: 500ms;
+    padding-bottom: 16.5%;
+}
+
+
+@media only screen and (min-width: 879px) {
+
+    .corporativeBanner{
+        margin: 0 auto;
+    }
+    .corporativeBanner a{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .bannerTxt{
+        font-family: 'LINESeed', 'SFPro', 'Arial', 'Noto Sans JP', 'Noto Sans KR', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 20px;
+        z-index: 10;
+        font-weight: 700;
+        font-size: 50px;
+    }
+
+    .bannerImageCorp img{
+        min-width: 1920px !important;
+        min-height: 320px !important;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    
+
+    .productsView {
+        margin-top: 60px;
+        max-width: 1200px;
+        position: relative;
+        background: #f7f8f9;
+        margin: 0 auto;
+    }
+
+    .productMenuWrap {
+        width: 300px;
+        float: left;
+        margin: 0;
+        overflow: auto;
+    }
+
+    .productMenu {
+        margin: 0 0 0 40px;
+    }
+
+    .productMenu li {
+        margin-right: 4px;
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    .textDescription{
+        font-size: 14px;
+        line-height: 1.429;
+        color: #616161;
+        font-family: 'SFPro', 'Arial', 'Noto Sans JP', 'Noto Sans KR', sans-serif;
+    }
+    
+    .productList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 890px;
+        margin-left: 310px;
+    }
+
+    .bannerServices{
+        width: 570px;
+        padding: 30px 35px;
+        overflow: hidden;
+        height: 340px;
+        margin-right: 10px;
+    }
+    
+
+    .bannerImage img{
+        border-radius: 4px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 560px;
+        height: 340px;
+        object-fit: cover;
+        object-position: center center;
+        opacity: 1;
+        transition: none;
+        margin-left: 320px;
+        margin-right: 40px;
+    }
+
+    .product, .endCont {
+        background-color: #fff;
+        width: 270px; 
+        padding: 4px;
+        margin: 0 10px 20px; 
+        border-radius: 4px;
+        border-bottom: none;
+        position: relative;
+        overflow: hidden;
+        height: 340px;
+        padding: 30px 35px;
+    }
+
+    .endCont:hover .productLink {
+        opacity: 10; 
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .product:after {
+        content: "\30FB\30FB\30FB";
+        position: absolute;
+        font-size: 20px;
+        letter-spacing: -12px;
+        left: 22px;
+        bottom: 20px;
+        color: #1e1e1e;
+        opacity: .3; 
+    }
+    
+    .productIcon {
+        border-radius: 16px;
+        margin-bottom: 16px;
+        min-width: 70px;
+        min-height: 70px;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+    }
+    .productIcon img {
+        position: absolute;
+        overflow: hidden;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+        opacity: 0px;
+    }
+    .productText {
+        width: 100%;
+        max-height: 190px;
+        margin-left: 0;
+        overflow: hidden;
+    }
+    .productTitle {
+        font-family: 'SFPro', 'Arial', 'Noto Sans JP', 'Noto Sans KR', sans-serif;
+        color: black;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.182;
+        margin-bottom: 8px; 
+    }
+
+    
+    .productLink{
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);;
+        overflow: hidden;
+        opacity: 0;
+        border-radius: 4px;
+        transition: all .5s;
+    }
+
+    .productLinkLDisplay{
+        position: absolute;
+        display: inline-block;
+        transform: translateY(50%);
+        left: 60px;
+        bottom: 50%;
+        box-sizing: border-box;
+    }
+
+    .productLinkLDisplay li{
+        display: block;
+        margin-bottom: 20px;
+        width: 150px;
+        height: 50px;
+        box-sizing: border-box;
+    }
+
+    .productLinkLDisplay li a{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border: 1px solid hsla(0, 0%, 100%, .3);
+        border-radius: 4px;
+        line-height: 3.85;
+        padding-left: 16px;
+        font-size: 13px;
+        color: #fff;
+        box-sizing: border-box;
+    }
+
+    .productLinkLDisplay li span:first-child{
+        width: 24px !important;
+        height: 24px !important;
+        overflow: hidden;
+        margin-right: 8px;
+    }
+
+    .productLinkLDisplay li span{
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .siteIcon{
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        width: 220px; 
+        height: 143px; 
+    }
+
+    .appStore{
+        left: -7px;
+        top: -10px;
+    }
+
+    .googlePlay{
+        left: -52px;
+        top: -10px;
+    }
+
+    .desktop{
+        left: -100px;
+        top: -10px;
+    }
+    
+    .moreDetails{
+        left: -172px;
+        top: -20px;
+        transform: scale(.8);
+    }
+
+    .productLinkLDisplay li:hover {
+        background-color: #07b53b; 
+        cursor: pointer;
+    }
+
+    .productLinkLDisplay li:hover:not(:last-child) .siteIcon img {
+        overflow: hidden;
+        width: 24px; 
+        height: 35px; 
+        filter: brightness(1) invert(1);
+        top: -5px !important;
+        left: 10px !important;
+        display: flex;
+        transform: scale(0.9, 1);
+      }
+    
+}
+
+
+
+@media only screen and (max-width: 878px) {
+
+    .allProduct{
+        margin: 0 auto;
+        padding: 80px 20px;
+    }
+
+    .servicesTitle{
+        font-size: 28px;
+        font-weight: 700;
+        font-family: 'SFPro', 'Arial', 'Noto Sans JP', 'Noto Sans KR', sans-serif;
+    }
+
+    .productMenuWrap {
+        width: 100%;
+        overflow: auto;
+        margin: 16px 0 40px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .productMenu {
+        display: flex;
+        border-radius: 10px;
+        float: left;
+        box-sizing: border-box;
+        white-space: nowrap;
+    }
+
+    .productMenu li {
+        margin-right: 4px;
+        display: inline-block;
+        margin-bottom: 16px;
+    }
+
+    .product{
+        position: relative;
+        padding: 25px 0;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba(0, 0, 0, .05);
+        overflow: hidden;
+    }
+
+    .product, .endCont a{
+        display: block !important;
+    }
+
+    .forSmallScreen{
+        display: block !important;
+    }
+
+    .productIcon{
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 16px;
+        width: 70px;
+        height: 70px;
+        border: 1px solid rgba(0, 0, 0, .1);
+        z-index: 10;
+    }
+
+    .productText{
+        display: inline-block;
+        width: calc(100% - 90px);
+        margin-left: 15px;
+        vertical-align:middle ;
+        
+    }
+
+    .productTitle{
+        font-family: SFPro, Arial, Noto Sans JP, Noto Sans KR, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: #1e1e1e;
+    }
+
+    .productText div {
+        font-size: 13px;
+        color: #616161;
+    }
+
+    .productLink{
+        display: none;
+    }
+
+    .corporativeBanner a{
+
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+        text-align: center;
+        overflow: hidden
+    }
+
+    .bannerTxt{
+        font-family: 'LINESeed', 'SFPro', 'Arial', 'Noto Sans JP', 'Noto Sans KR', sans-serif;
+        display: block;
+        font-weight: 700;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 10;
+    }
+
+    .bannerTxt{
+        display: block !important;
+    }
+
+    .corporativeBanner a .bannerImageCorp {
+        position: relative;
+        overflow: hidden;
+        width: 640px;
+        height: 140px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bannerImageCorp img{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+  }
+}

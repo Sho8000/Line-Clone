@@ -1,0 +1,12 @@
+.cardList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    list-style: none;
+}
+
+.cardList li{
+    width: 30%;
+}
