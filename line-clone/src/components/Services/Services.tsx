@@ -39,7 +39,7 @@ const Services = () => {
       <section id="services" className={styles.corporativeBanner}>
         <a href="https://www.linebiz.com/jp-en/">
           <div className={styles.bannerTxt}>Corporative services</div>
-          <div className={styles.bannerImageCorp}>
+          <div className={styles.bannerImageCorp}>aaaa
             <img src="images/services/corporativeServices.png" alt="" />
           </div>
         </a>

@@ -66,9 +66,9 @@ const Navbar = () => {
                                 </li>
                             ))}
                         </ul>
-                        <div className={styles.langMenuTop}>
+{/*                         <div className={styles.langMenuTop}>
                             <BiGlobe aria-label="Language selector" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </header>
