@@ -16,8 +16,6 @@ import { useScroll } from "motion/react";
 import styles from '../../../src/app/components/Header/Header.module.css'
 import Link from "next/link";
 
-gsap.registerPlugin(useGSAP);
-
 export default function Header() {
   const [opacity1,setOpacity1] = useState(0);
   const [opacity2,setOpacity2] = useState(1);
@@ -28,9 +26,9 @@ export default function Header() {
   const lineLogoRef = useRef(null);
   const lineLogoAnimation = gsap.timeline();
   useEffect(() => {
+    console.log("Here",lineLogoRef.current, firstWallRef.current)
     lineLogoAnimation
-      .to(lineLogoRef.current,{scaleX:0 ,duration:0})
-      .to(lineLogoRef.current,{opacity:1 ,duration:0})
+      .set(lineLogoRef.current,{scaleX:0,opacity:1})
       .to(lineLogoRef.current,{scaleX:1 ,duration:1, transformOrigin:"left"})
       .to(lineLogoRef.current,{scaleX:0 ,duration:1, transformOrigin:"right"},4)
       .to(firstWallRef.current,{opacity:0,zIndex:-1 , duration:2},6)
