@@ -83,13 +83,11 @@
         /* display: block; */
         flex-direction: column;
         padding: 2.4rem;
-        border: 1px red solid;
     }
 
     .left{
         order: 2;
         width: 100%;
-        border: 1px black solid;
     }
 
     .logo{
@@ -119,7 +117,6 @@
 
     .right{
         order: 1;
-        border: 1px red solid;
         position: static;
     };
 
