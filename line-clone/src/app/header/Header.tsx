@@ -27,11 +27,12 @@ export default function Header() {
   const firstWallRef = useRef<HTMLDivElement>(null);
   const lineLogoRef = useRef<HTMLDivElement>(null);
   const lineLogoAnimation = gsap.timeline();
+  
   useEffect(() => {
     lineLogoAnimation
-      .set(lineLogoRef.current,{scaleX:0,opacity:1})
-      .to(lineLogoRef.current,{scaleX:1 ,duration:1, transformOrigin:"left"})
-      .to(lineLogoRef.current,{scaleX:0 ,duration:1, transformOrigin:"right"},4)
+      .set(".firstLogo",{scaleX:0,opacity:1})
+      .to(".firstLogo",{scaleX:1 ,duration:1, transformOrigin:"left"})
+      .to(".firstLogo",{scaleX:0 ,duration:1, transformOrigin:"right"},4)
       .to(firstWallRef.current,{opacity:0,zIndex:-1 , duration:2},6)
   }, []);
 
@@ -148,7 +149,7 @@ export default function Header() {
       <section ref={scrollBG} id="header" className="h-[100vh] w-[100vw] overflow-hidden">
         <div className="h-[100vh] w-[100vw] relative">
           <div ref={firstWallRef} className="h-[100vh] w-[100vw] fixed z-50 bg-white firstWall">
-            <div ref={lineLogoRef} className="h-[130] w-[400] bg-green-500 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] opacity-0">
+            <div ref={lineLogoRef} className="h-[130] w-[400] bg-green-500 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] opacity-0 firstLogo">
             </div>
             <h1 className="text-white absolute  top-[50%] left-[50%] translate-x-[30%] text-6xl font-bold firstWall_text">LINE</h1>
           </div>
