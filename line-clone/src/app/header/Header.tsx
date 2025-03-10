@@ -13,7 +13,7 @@ import { redirect } from "next/navigation";
 import "./Header.css";
 import { useScroll } from "motion/react";
 
-import styles from '../../components/Header/Header.module.css'
+import styles from '../../../src/app/components/Header/Header.module.css'
 import Link from "next/link";
 
 export default function Header() {

@@ -1,15 +1,15 @@
 // 'use client';
-import Description from "@/components/Description/Description";
-import MainMsg from "@/components/MainMsg/MainMsg";
-import MainReversed from "@/components/MainMsg/MainReversed";
-import SecondMsg from "@/components/SecondMsg/SecondMsg";
-import SecondReverse from "@/components/SecondMsg/SecondReverse";
-import MessengerApp from "@/components/MessengerApp/MessengerApp";
+import Description from "@/app/components/Description/Description";
+import MainMsg from "@/app/components/MainMsg/MainMsg";
+import MainReversed from "@/app/components/MainMsg/MainReversed";
+import SecondMsg from "@/app/components/SecondMsg/SecondMsg";
+import SecondReverse from "@/app/components/SecondMsg/SecondReverse";
+import MessengerApp from "@/app/components/MessengerApp/MessengerApp";
 import './globals.css'
 import Header from "./header/Header";
-import Navbar from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
-import Services from "@/components/Services/Services";
+import Navbar from "@/app/components/Header/Header";
+import Footer from "@/app/components/Footer/Footer";
+import Services from "@/app/components/Services/Services";
 
 export default function Home() {
   const section1 = {
