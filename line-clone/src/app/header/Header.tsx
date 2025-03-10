@@ -25,7 +25,7 @@ export default function Header() {
   const firstWallRef = useRef(null);
   const lineLogoRef = useRef(null);
   const lineLogoAnimation = gsap.timeline();
-  useGSAP(() => {
+  useEffect(() => {
     lineLogoAnimation
       .to(lineLogoRef.current,{scaleX:0 ,duration:0})
       .to(lineLogoRef.current,{opacity:1 ,duration:0})
