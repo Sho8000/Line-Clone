@@ -25,14 +25,14 @@ export default function Header() {
   const firstWallRef = useRef(null);
   const lineLogoRef = useRef(null);
   const lineLogoAnimation = gsap.timeline();
-  useEffect(() => {
+  useGSAP(() => {
     lineLogoAnimation
       .to(lineLogoRef.current,{scaleX:0 ,duration:0})
       .to(lineLogoRef.current,{opacity:1 ,duration:0})
       .to(lineLogoRef.current,{scaleX:1 ,duration:1, transformOrigin:"left"})
       .to(lineLogoRef.current,{scaleX:0 ,duration:1, transformOrigin:"right"},4)
       .to(firstWallRef.current,{opacity:0,zIndex:-1 , duration:2},6)
-  }, []);
+  }, [lineLogoRef]);
 
   /* main animation */
   const pic1Ref = useRef(null);
