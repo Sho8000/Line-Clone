@@ -16,6 +16,8 @@ import { useScroll } from "motion/react";
 import styles from '../../../src/app/components/Header/Header.module.css'
 import Link from "next/link";
 
+gsap.registerPlugin(useGSAP);
+
 export default function Header() {
   const [opacity1,setOpacity1] = useState(0);
   const [opacity2,setOpacity2] = useState(1);
@@ -32,7 +34,7 @@ export default function Header() {
       .to(lineLogoRef.current,{scaleX:1 ,duration:1, transformOrigin:"left"})
       .to(lineLogoRef.current,{scaleX:0 ,duration:1, transformOrigin:"right"},4)
       .to(firstWallRef.current,{opacity:0,zIndex:-1 , duration:2},6)
-  }, [lineLogoRef]);
+  }, []);
 
   /* main animation */
   const pic1Ref = useRef(null);
