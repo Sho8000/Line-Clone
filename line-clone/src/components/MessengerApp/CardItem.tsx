@@ -12,7 +12,7 @@ interface CardProps {
 }
 const CardItem = ({card}:CardProps) => {
 
-    const {id, title, msg, image} = card
+    const { title, msg, image} = card
 
     return (
         <div className={styles.cardItem}>

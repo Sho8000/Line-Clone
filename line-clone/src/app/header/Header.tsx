@@ -14,8 +14,7 @@ import "./Header.css";
 import { useScroll } from "motion/react";
 
 import styles from '../../components/Header/Header.module.css'
-import { BiGlobe } from 'react-icons/bi'
-
+import Link from "next/link";
 
 export default function Header() {
   const [opacity1,setOpacity1] = useState(0);
@@ -157,7 +156,7 @@ export default function Header() {
           <header>
             <div>
               <div className={styles.headerTopRow}>
-                  <h1><a href="/">LINE</a></h1>
+                  <h1><Link href="/">LINE</Link></h1>
               </div>
               <div className={styles.navigationContainer}>
               </div>

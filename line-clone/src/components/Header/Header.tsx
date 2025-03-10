@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState, useCallback, useLayoutEffect } from 'react'
 import styles from './Header.module.css'
-import { BiGlobe } from 'react-icons/bi'
+import Link from 'next/link'
 
 const menuItems = [
     { id: 'lifeOnLine', label: 'Life on LINE' },
@@ -55,7 +55,7 @@ const Navbar = () => {
             <header className={styles.header}>
                 <div>
                     <div className={styles.headerTopRow}>
-                        <h1><a href="/">LINE</a></h1>
+                        <h1><Link href="/">LINE</Link></h1>
                     </div>
                     <div className={styles.navigationContainer}>
                         <ul className={styles.headerMenu}>
