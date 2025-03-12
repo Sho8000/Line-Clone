@@ -28,13 +28,32 @@ export default function Header() {
   const lineLogoRef = useRef<HTMLDivElement>(null);
   const lineLogoAnimation = gsap.timeline();
   
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useGSAP(() => {
+    if (!isMounted) return;
+    lineLogoAnimation
+      .set(lineLogoRef.current,{scaleX:0,opacity:1})
+      .fromTo(lineLogoRef.current,{opacity:0},{opacity:1})
+      .to(lineLogoRef.current,{scaleX:1 ,duration:1, transformOrigin:"left"})
+      .to(lineLogoRef.current,{scaleX:0 ,duration:1, transformOrigin:"right"},4)
+      .to(firstWallRef.current,{opacity:0,zIndex:-1 , duration:2},6)
+  }, { dependencies: [isMounted] });
+  
+/* 
   useEffect(() => {
     lineLogoAnimation
-      .set(".firstLogo",{scaleX:0,opacity:1})
-      .to(".firstLogo",{scaleX:1 ,duration:1, transformOrigin:"left"})
-      .to(".firstLogo",{scaleX:0 ,duration:1, transformOrigin:"right"},4)
+      .set(lineLogoRef.current,{scaleX:0,opacity:1})
+      .fromTo(lineLogoRef.current,{opacity:0},{opacity:1})
+      .to(lineLogoRef.current,{scaleX:1 ,duration:1, transformOrigin:"left"})
+      .to(lineLogoRef.current,{scaleX:0 ,duration:1, transformOrigin:"right"},4)
       .to(firstWallRef.current,{opacity:0,zIndex:-1 , duration:2},6)
   }, []);
+ */
 
   /* main animation */
   const pic1Ref = useRef(null);
