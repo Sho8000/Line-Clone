@@ -8,161 +8,142 @@ import iconAnd from "../../../public/images/header/androidLogo.png"
 import iconDownload from "../../../public/images/header/iconDownload.png"
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";    
-import { redirect } from "next/navigation";
+import { useGSAP } from "@gsap/react";
 import "./Header.css";
 import { useScroll } from "motion/react";
-
 import styles from '../../../src/app/components/Header/Header.module.css'
 import Link from "next/link";
-
 gsap.registerPlugin(useGSAP);
-
 export default function Header() {
-  const [opacity1,setOpacity1] = useState(0);
-  const [opacity2,setOpacity2] = useState(1);
-  const pic1 = useRef(0)
-
-  /* very first animation */
-  const firstWallRef = useRef<HTMLDivElement>(null);
-  const lineLogoRef = useRef<HTMLDivElement>(null);
-  const lineLogoAnimation = gsap.timeline();
-  
+  const [opacity1, setOpacity1] = useState(0);
+  const [opacity2, setOpacity2] = useState(1);
+  const pic1 = useRef(0);
+  // Track if component is mounted
   const [isMounted, setIsMounted] = useState(false);
-
   useEffect(() => {
     setIsMounted(true);
+    return () => setIsMounted(false);
   }, []);
-
-  useGSAP(() => {
-    if (!isMounted) return;
-    lineLogoAnimation
-      .set(lineLogoRef.current,{scaleX:0,opacity:1})
-      .fromTo(lineLogoRef.current,{opacity:0},{opacity:1})
-      .to(lineLogoRef.current,{scaleX:1 ,duration:1, transformOrigin:"left"})
-      .to(lineLogoRef.current,{scaleX:0 ,duration:1, transformOrigin:"right"},4)
-      .to(firstWallRef.current,{opacity:0,zIndex:-1 , duration:2},6)
-  }, { dependencies: [isMounted] });
-  
-/* 
-  useEffect(() => {
-    lineLogoAnimation
-      .set(lineLogoRef.current,{scaleX:0,opacity:1})
-      .fromTo(lineLogoRef.current,{opacity:0},{opacity:1})
-      .to(lineLogoRef.current,{scaleX:1 ,duration:1, transformOrigin:"left"})
-      .to(lineLogoRef.current,{scaleX:0 ,duration:1, transformOrigin:"right"},4)
-      .to(firstWallRef.current,{opacity:0,zIndex:-1 , duration:2},6)
-  }, []);
- */
-
-  /* main animation */
+  /* Refs */
+  const firstWallRef = useRef<HTMLDivElement>(null);
+  const lineLogoRef = useRef<HTMLDivElement>(null);
   const pic1Ref = useRef(null);
   const pic2Ref = useRef(null);
-  const pic1Animation = gsap.timeline();
-  const pic1AnimationOpacity = gsap.timeline();
-  const pic2Animation = gsap.timeline();
-  const pic2AnimationOpacity = gsap.timeline();
-
-  useEffect(()=>{
-    const selectPic = setTimeout(()=>{
-      if(pic1.current===1){
-        pic1.current = 0
-        setOpacity1(0)
-        setOpacity2(1)
-        pic2Animation.fromTo(pic2Ref.current,{scale:1.5, ease:"none",duration:1},{scale:1, ease:"none", duration:6})
+  const scrollText = useRef(null);
+  const scrollBar = useRef(null);
+  const scrollBG = useRef<HTMLDivElement>(null);
+  const MainScroll = useRef<HTMLDivElement>(null);
+  /* First animation */
+  useGSAP(() => {
+    if (!isMounted) return;
+    const lineLogoAnimation = gsap.timeline();
+    lineLogoAnimation
+      .set(lineLogoRef.current, { scaleX: 0, opacity: 0 })
+      .to(lineLogoRef.current, { opacity: 1, duration: 0.1 })
+      .to(lineLogoRef.current, { scaleX: 1, duration: 1, transformOrigin: "left" })
+      .to(lineLogoRef.current, { scaleX: 0, duration: 1, transformOrigin: "right" }, 4)
+      .to(firstWallRef.current, { opacity: 0, zIndex: -1, duration: 2 }, 6);
+  }, { dependencies: [isMounted] });
+  /* Picture animations */
+  useEffect(() => {
+    if (!isMounted) return;
+    const selectPic = setTimeout(() => {
+      if (pic1.current === 1) {
+        pic1.current = 0;
+        setOpacity1(0);
+        setOpacity2(1);
+        const pic2Animation = gsap.timeline();
+        const pic2AnimationOpacity = gsap.timeline();
+        pic2Animation.fromTo(pic2Ref.current, { scale: 1.5, ease: "none" }, { scale: 1, ease: "none", duration: 6 });
         pic2AnimationOpacity
-          .fromTo(pic2Ref.current,{opacity:0, ease:"none",duration:0},{opacity:1, ease:"none",duration:2})
-          .to(pic2Ref.current,{opacity:0, ease:"none",duration:2},4)
-
-      } else{
-        pic1.current = 1
-        setOpacity1(1)
-        setOpacity2(0)
-        pic1Animation.fromTo(pic1Ref.current,{scale:1.5, ease:"none",duration:0.1},{scale:1, ease:"none", duration:6})
+          .fromTo(pic2Ref.current, { opacity: 0, ease: "none" }, { opacity: 1, ease: "none", duration: 2 })
+          .to(pic2Ref.current, { opacity: 0, ease: "none", duration: 2 }, 4);
+      } else {
+        pic1.current = 1;
+        setOpacity1(1);
+        setOpacity2(0);
+        const pic1Animation = gsap.timeline();
+        const pic1AnimationOpacity = gsap.timeline();
+        pic1Animation.fromTo(pic1Ref.current, { scale: 1.5, ease: "none" }, { scale: 1, ease: "none", duration: 6 });
         pic1AnimationOpacity
-        .fromTo(pic1Ref.current,{opacity:0, ease:"none",duration:0},{opacity:1, ease:"none",duration:2})
-        .to(pic1Ref.current,{opacity:0, ease:"none",duration:2},4)
+          .fromTo(pic1Ref.current, { opacity: 0, ease: "none" }, { opacity: 1, ease: "none", duration: 2 })
+          .to(pic1Ref.current, { opacity: 0, ease: "none", duration: 2 }, 4);
       }
-    },5000)
+    }, 5000);
     return () => clearTimeout(selectPic);
-  },[opacity1,opacity2])
-
-  /* download hover */
+  }, [opacity1, opacity2, isMounted]);
+  /* Hover states */
   const [isHoveringApple, setIsHoveredApple] = useState(false);
   const [isHoveringAnd, setIsHoveredAnd] = useState(false);
   const onMouseEnterApple = () => setIsHoveredApple(true);
   const onMouseLeaveApple = () => setIsHoveredApple(false);
   const onMouseEnterAnd = () => setIsHoveredAnd(true);
   const onMouseLeaveAnd = () => setIsHoveredAnd(false);
+  /* Handle downloads with client-side navigation */
   const downloadApple = () => {
-    redirect("https://apps.apple.com/us/app/line/id443904275")
-  }
-  const downloadAndloid = () => {
-    redirect("https://play.google.com/store/apps/details?id=jp.naver.line.android")
-  }
-
-  /* scrollText animation*/
-  const scrollText = useRef(null);
-  const scrollTextAnimation = gsap.timeline();
-
-  /* Scrollbar animation */
-  const scrollBar = useRef(null);
-  const scrollBarAnimation = gsap.timeline();
-
-  /* common GSAP part */
+    window.open("https://apps.apple.com/us/app/line/id443904275", "_blank");
+  };
+  const downloadAndroid = () => {
+    window.open("https://play.google.com/store/apps/details?id=jp.naver.line.android", "_blank");
+  };
+  /* Common GSAP animations */
   useGSAP(() => {
-    pic2Animation.fromTo(pic2Ref.current,{scale:1.5, ease:"none",duration:1},{scale:1, ease:"none", duration:6})
+    if (!isMounted) return;
+    // Initial picture animation
+    const pic2Animation = gsap.timeline();
+    pic2Animation.fromTo(pic2Ref.current, { scale: 1.5, ease: "none" }, { scale: 1, ease: "none", duration: 6 });
+    const pic2AnimationOpacity = gsap.timeline();
     pic2AnimationOpacity
-      .to(pic2Ref.current,{opacity:1, ease:"none",duration:2})
-      .to(pic2Ref.current,{opacity:0, ease:"none",duration:2},4);
-
-    scrollTextAnimation
-      .fromTo(scrollText.current,{y:10, ease:"power1.inOut"},{y:-10, ease:"power1.inOut"  })
-      .yoyo(true).repeat(-1)
-
+      .to(pic2Ref.current, { opacity: 1, ease: "none", duration: 2 })
+      .to(pic2Ref.current, { opacity: 0, ease: "none", duration: 2 }, 4);
+    // Scroll text animation
+    const scrollTextAnimation = gsap.timeline({ repeat: -1, yoyo: true });
+    scrollTextAnimation.fromTo(scrollText.current,
+      { y: 10, ease: "power1.inOut" },
+      { y: -10, ease: "power1.inOut", duration: 1 }
+    );
+    // Scroll bar animation
+    const scrollBarAnimation = gsap.timeline({ repeat: -1 });
     scrollBarAnimation
-      .fromTo(scrollBar.current,{scaleY:0, transformOrigin:"top"},{scaleY:1, transformOrigin:"top"})
-      .fromTo(scrollBar.current,{scaleY:1, transformOrigin:"bottom"},{scaleY:0, transformOrigin:"bottom"})
-      .repeat(-1)
-    
-  }, []);
-
+      .fromTo(scrollBar.current,
+        { scaleY: 0, transformOrigin: "top" },
+        { scaleY: 1, transformOrigin: "top", duration: 1 }
+      )
+      .fromTo(scrollBar.current,
+        { scaleY: 1, transformOrigin: "bottom" },
+        { scaleY: 0, transformOrigin: "bottom", duration: 1 }
+      );
+  }, { dependencies: [isMounted] });
   /* Scroll effect */
-  const mainScrollAnimation = gsap.timeline()
-  const [shrinkBG,setShrinkBG] = useState(false);
-  const scrollBG = useRef<HTMLDivElement>(null);
-  const MainScroll = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({target:MainScroll});
-
-  useEffect(()=>{
-    const scrollAction = scrollYProgress.on('change',(latest)=> {
-      console.log("scrollProgresY",latest)
-      if(latest<0.01){
-        setShrinkBG(false)
-      } else{
-        setShrinkBG(true)
+  const [shrinkBG, setShrinkBG] = useState(false);
+  const { scrollYProgress } = useScroll({ target: MainScroll });
+  useEffect(() => {
+    if (!isMounted) return;
+    const scrollAction = scrollYProgress.on('change', (latest) => {
+      if (latest < 0.01) {
+        setShrinkBG(false);
+      } else {
+        setShrinkBG(true);
       }
-    })
-
-    if(shrinkBG){
+    });
+    const mainScrollAnimation = gsap.timeline();
+    if (shrinkBG) {
       mainScrollAnimation
-        .to(".pic1Container",{scaleY:0.7, duration:0.1})
-        .to(".pic2Container",{scaleY:0.7, duration:0.1})
-        .to(".scrollText",{opacity:0, duration:0})
-        .to(scrollBar,{opacity:0, duration:0})
-    }else{
+        .to(".pic1Container", { scaleY: 0.7, duration: 0.1 })
+        .to(".pic2Container", { scaleY: 0.7, duration: 0.1 })
+        .to(".scrollText", { opacity: 0, duration: 0 })
+        .to(scrollBar.current, { opacity: 0, duration: 0 });
+    } else {
       mainScrollAnimation
-        .to(".pic1Container",{scaleY:1, duration:0.1})
-        .to(".pic2Container",{scaleY:1, duration:0.1})
-        .to(".scrollText",{opacity:1, duration:0})
-        .to(scrollBar,{opacity:1, duration:0})
+        .to(".pic1Container", { scaleY: 1, duration: 0.1 })
+        .to(".pic2Container", { scaleY: 1, duration: 0.1 })
+        .to(".scrollText", { opacity: 1, duration: 0 })
+        .to(scrollBar.current, { opacity: 1, duration: 0 });
     }
-
-    return()=>{
+    return () => {
       scrollAction();
-    }
-  },[scrollYProgress,shrinkBG])
-
+    };
+  }, [scrollYProgress, shrinkBG, isMounted]);
   return (
     <>
       <section ref={scrollBG} id="header" className="h-[100vh] w-[100vw] overflow-hidden">
@@ -170,10 +151,9 @@ export default function Header() {
           <div ref={firstWallRef} className="h-[100vh] w-[100vw] fixed z-50 bg-white firstWall">
             <div ref={lineLogoRef} className="h-[130] w-[400] bg-green-500 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] opacity-0 firstLogo">
             </div>
-            <h1 className="text-white absolute  top-[50%] left-[50%] translate-x-[30%] text-6xl font-bold firstWall_text">LINE</h1>
+            <h1 className="text-white absolute top-[50%] left-[50%] translate-x-[30%] text-6xl font-bold firstWall_text">LINE</h1>
           </div>
-
-          {/* added to adjust navbar height */}
+          {/* Rest of your JSX remains the same */}
           <header>
             <div>
               <div className={styles.headerTopRow}>
@@ -183,8 +163,6 @@ export default function Header() {
               </div>
             </div>
           </header>
-          {/* until here */}
-          
           <div className="absolute h-[100vh] w-[100vw] mainWall">
             <div className="absolute h-[100vh] w-[100vw] pic1Container overflow-hidden">
               <Image
@@ -224,17 +202,17 @@ export default function Header() {
                       src={iconDownload}
                       width={45}
                       height={45}
-                      alt="download img"   
+                      alt="download img"
                       onClick={downloadApple}
-                      style={{ width:"105%", height:"100%", borderRadius:5 , backgroundColor:"rgb(99, 244, 99)"}}             
+                      style={{ width:"105%", height:"100%", borderRadius:5, backgroundColor:"rgb(99, 244, 99)"}}
                     />
                   ):(
                     <Image
                       src={iconApple}
                       width={45}
                       height={45}
-                      alt="Apple img"   
-                      style={{height:"70%", width:"60%"}}             
+                      alt="Apple img"
+                      style={{height:"70%", width:"60%"}}
                     />
                   )}
                 </div>
@@ -247,23 +225,23 @@ export default function Header() {
                       src={iconDownload}
                       width={45}
                       height={45}
-                      alt="download img"   
-                      onClick={downloadAndloid}
-                      style={{ width:"105%", height:"100%", borderRadius:5 ,backgroundColor:"rgb(10, 244, 10)"}}             
-                    />                
+                      alt="download img"
+                      onClick={downloadAndroid}
+                      style={{ width:"105%", height:"100%", borderRadius:5, backgroundColor:"rgb(10, 244, 10)"}}
+                    />
                   ):(
                     <Image
                       src={iconAnd}
                       width={15}
                       height={35}
                       alt="And img"
-                      style={{height:"70%", width:"60%"}}             
+                      style={{height:"70%", width:"60%"}}
                     />
                   )}
                 </div>
               </div>
             </div>
-            <div ref={scrollText} className="absolute top-[80%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-white ">
+            <div ref={scrollText} className="absolute top-[80%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-white">
               <p className="text-[14px] scrollText">scroll</p>
             </div>
             <div ref={scrollBar} className="w-1 h-[15%] absolute bottom-[0%] left-[50%] -translate-x-1/2 bg-white"></div>
