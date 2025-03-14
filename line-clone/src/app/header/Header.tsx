@@ -35,15 +35,16 @@ export default function Header() {
   const MainScroll = useRef<HTMLDivElement>(null);
   /* First animation */
   useGSAP(() => {
-    if (!isMounted) return;
-    const lineLogoAnimation = gsap.timeline();
-    lineLogoAnimation
-      .set(lineLogoRef.current, { scaleX: 0, opacity: 0 })
-      .to(lineLogoRef.current, { opacity: 1, duration: 0.1 })
+    if (!isMounted || !lineLogoRef.current || !firstWallRef.current) return;
+    console.log("Refs:", lineLogoRef.current, firstWallRef.current);
+    const tl = gsap.timeline();
+    tl.set(lineLogoRef.current, { scaleX: 0, opacity: 1 })
+      .fromTo(lineLogoRef.current, { opacity: 0 }, { opacity: 1 })
       .to(lineLogoRef.current, { scaleX: 1, duration: 1, transformOrigin: "left" })
       .to(lineLogoRef.current, { scaleX: 0, duration: 1, transformOrigin: "right" }, 4)
       .to(firstWallRef.current, { opacity: 0, zIndex: -1, duration: 2 }, 6);
   }, { dependencies: [isMounted] });
+
   /* Picture animations */
   useEffect(() => {
     if (!isMounted) return;
@@ -146,12 +147,11 @@ export default function Header() {
   }, [scrollYProgress, shrinkBG, isMounted]);
   return (
     <>
-      <section ref={scrollBG} id="header" className="h-[100vh] w-[100vw] overflow-hidden">
-        <div className="h-[100vh] w-[100vw] relative">
-          <div ref={firstWallRef} className="h-[100vh] w-[100vw] fixed z-50 bg-white firstWall">
-            <div ref={lineLogoRef} className="h-[130] w-[400] bg-green-500 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] opacity-0 firstLogo">
-            </div>
-            <h1 className="text-white absolute top-[50%] left-[50%] translate-x-[30%] text-6xl font-bold firstWall_text">LINE</h1>
+      <section id="header" className="h-[100vh] w-[100vw] overflow-hidden">
+      <div className="h-[100vh] w-[100vw] relative">
+        <div ref={firstWallRef} className="h-[100vh] w-[100vw] fixed z-[100] bg-white firstWall">
+          <div ref={lineLogoRef} className="h-[130px] w-[400px] bg-green-500 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] opacity-0 firstLogo"></div>
+          <h1 className="text-white absolute top-[50%] left-[50%] translate-x-[30%] text-6xl font-bold firstWall_text">LINE</h1>
           </div>
           {/* Rest of your JSX remains the same */}
           <header>
