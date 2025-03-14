@@ -193,7 +193,7 @@ export default function Header() {
                 <p className="text-[14px]">Download</p>
               </div>
               <div className="flex gap-2 mt-3">
-                <div className="w-[55] h-[55] border-2 rounded-md flex justify-center items-center"
+                <div className="w-[55px] h-[55px] border-2 rounded-md flex justify-center items-center"
                   onMouseEnter={onMouseEnterApple}
                   onMouseLeave={onMouseLeaveApple}
                 >
@@ -216,7 +216,7 @@ export default function Header() {
                     />
                   )}
                 </div>
-                <div className="w-[55] h-[55] border-2 rounded-md flex justify-center items-center"
+                <div className="w-[55px] h-[55px] border-2 rounded-md flex justify-center items-center"
                   onMouseEnter={onMouseEnterAnd}
                   onMouseLeave={onMouseLeaveAnd}
                 >
