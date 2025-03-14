@@ -31,7 +31,7 @@ export default function Header() {
   const pic2Ref = useRef(null);
   const scrollText = useRef(null);
   const scrollBar = useRef(null);
-  const scrollBG = useRef<HTMLDivElement>(null);
+//  const scrollBG = useRef<HTMLDivElement>(null);
   const MainScroll = useRef<HTMLDivElement>(null);
   /* First animation */
   useGSAP(() => {
